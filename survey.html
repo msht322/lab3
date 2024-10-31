@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опитувальник - Банк Lenovo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Опитувальник</h1><br>
+        <input type="search" name="search" id="search" placeholder="search...">
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="survey.html">Опитувальник</a></li>
+                <li class="has-submenu">
+                    <a href="news.html">Новини &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="#">Останні новини</a></li>
+                        <li><a href="#">Аналітика</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Про компанію</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Дякуємо за участь у нашому опитуванні!</h2>
+            <form>
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="feedback">Ваші відгуки:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                
+                <button type="submit">Відправити</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Банк Lenovo - не фінансова піраміда</p>
+    </footer>
+    <button id="scrollTop" title="Наверх">↑</button>
+    <script>
+        window.onscroll = function() {
+            var scrollTopButton = document.getElementById("scrollTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
+        
+        document.getElementById('scrollTop').onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+</body>
+</html>

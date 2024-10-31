@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банк Lenovo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ласкаво просимо до Банку Lenovo</h1><br>
+        <input type="search" name="search" id="search" placeholder="search...">
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="survey.html">Опитувальник</a></li>
+                <li class="has-submenu">
+                    <a href="news.html">Новини &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="#">Останні новини</a></li>
+                        <li><a href="#">Аналітика</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Про компанію</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Наші Послуги</h2>
+            <p>Банк Lenovo пропонує широкий спектр фінансових послуг для приватних та корпоративних клієнтів.</p>
+            <div style="display: flex; justify-content: space-between;">
+                <img src="image/img-1.jpg" alt="1" width="400px">
+                <div class="image-container">
+                    <img src="image/img-2.jpg" alt="2" class="overlay-image">
+                    <div class="overlay-text">Сайт - йоу</div>
+                </div>
+                <img src="image/img-3.jpg" alt="3" width="400px">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Банк Lenovo - не фінансова піраміда</p>
+    </footer>
+    <button id="scrollTop" title="Наверх">↑</button>
+    <script>
+        window.onscroll = function() {
+            var scrollTopButton = document.getElementById("scrollTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
+        
+        document.getElementById('scrollTop').onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+</body>
+</html>
